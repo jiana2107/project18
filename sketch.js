@@ -53,10 +53,10 @@ function setup() {
   ground.x = ground.width /2;
   ground.velocityX = -(6 + 3*score/100);
   
-  gameOver = createSprite(height-200,height/2);
+  gameOver = createSprite(width/2,height/2);
   gameOver.addImage(gameOverImg);
   
-  restart = createSprite(height-200,height/1.75);
+  restart = createSprite(width/2.5,height/1.75);
   restart.addImage(restartImg);
   
   gameOver.scale = 0.5;
@@ -83,7 +83,7 @@ function draw() {
     score = score + Math.round(getFrameRate()/60);
     ground.velocityX = -(6 + 3*score/100);
   
-    if((keyDown("space") || touches.lenght>0 )&& trex.y >= width-600)  {
+    if((keyDown("space") || touches.lenght>0 )&& trex.y >= width-800)  {
       trex.velocityY = -10;
       touches=[];
     }
