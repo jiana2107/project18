@@ -56,7 +56,7 @@ function setup() {
   gameOver = createSprite(width/2,height/2);
   gameOver.addImage(gameOverImg);
   
-  restart = createSprite(width/2.75,height/1.75);
+  restart = createSprite(width/2.75,height/2.75);
   restart.addImage(restartImg);
   
   gameOver.scale = 0.5;
@@ -129,14 +129,14 @@ function draw() {
 function spawnClouds() {
   //write code here to spawn the clouds
   if (frameCount % 80 === 0) {
-    var cloud = createSprite(width,120,40,height-80);
+    var cloud = createSprite(leftEdge,120,40,height-80);
     cloud.y = Math.round(random(80,120));
     cloud.addImage(cloudImage);
     cloud.scale = 0.5;
     cloud.velocityX = -3;
     
      //assign lifetime to the variable
-    cloud.lifetime = 250;
+    cloud.lifetime = 350;
     
     //adjust the depth
     cloud.depth = trex.depth;
