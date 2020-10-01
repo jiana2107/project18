@@ -56,7 +56,7 @@ function setup() {
   gameOver = createSprite(width/2,height/2);
   gameOver.addImage(gameOverImg);
   
-  restart = createSprite(width/2.75,height/2.75);
+  restart = createSprite(width/2,height/2);
   restart.addImage(restartImg);
   
   gameOver.scale = 0.5;
@@ -84,7 +84,7 @@ function draw() {
     ground.velocityX = -(6 + 3*score/100);
   
     if((keyDown("space") || touches.length>0 )&& trex.y >= width-800)  {
-      trex.velocityY = -10;
+      trex.velocityY = -12;
       touches=[];
     }
   
@@ -129,7 +129,7 @@ function draw() {
 function spawnClouds() {
   //write code here to spawn the clouds
   if (frameCount % 80 === 0) {
-    var cloud = createSprite(leftEdge,120,40,height-80);
+    var cloud = createSprite(1500,120,40,height-80);
     cloud.y = Math.round(random(80,120));
     cloud.addImage(cloudImage);
     cloud.scale = 0.5;
