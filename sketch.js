@@ -37,7 +37,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(600,200);
+  createCanvas(windowWidth,windowHeight);
   //bgg2=createSprite(300,100,width,height);
   //bgg2.addImage(bgg);
   //bgg2.scale=5;
