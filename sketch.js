@@ -53,10 +53,10 @@ function setup() {
   ground.x = ground.width /2;
   ground.velocityX = -(6 + 3*score/100);
   
-  gameOver = createSprite(width/2,height/2+300);
+  gameOver = createSprite(width/2,height/2);
   gameOver.addImage(gameOverImg);
   
-  restart = createSprite(width/2,height/2+200);
+  restart = createSprite(width/2,height/2+50);
   restart.addImage(restartImg);
   
   gameOver.scale = 0.5;
@@ -150,7 +150,7 @@ function spawnClouds() {
 
 function spawnObstacles() {
   if(frameCount % 60 === 0) {
-    var obstacle = createSprite(invisibleGround.x+500,invisibleGround.y-30,10,40);
+    var obstacle = createSprite(invisibleGround.x+400,invisibleGround.y-30,10,40);
     //obstacle.debug = true;
     obstacle.velocityX = -(6 + 3*score/100);
     
